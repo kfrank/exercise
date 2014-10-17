@@ -1,0 +1,17 @@
+.g {
+	margin: 0.938em auto;
+	max-width: 75em;
+	text-align: center;
+
+	&-item {
+		display: inline-block;
+		margin: 0.938em;
+
+		@media screen and (min-width: 44em){
+			width: 45%;
+		}
+		@media screen and (min-width: 66em){
+			width: 25%;
+		}
+	}
+}
