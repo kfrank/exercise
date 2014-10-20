@@ -13,7 +13,7 @@ function favEvent(){
 			clicked.classList.remove('c--faved'); // Remove class
 		}, 500);
 		clicked.querySelector('[data-counter]').dataset.counter ++; // Increment fav counter
-		return false;
+		e.preventDefault();
 	});
 }
 
