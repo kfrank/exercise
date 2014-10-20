@@ -34,6 +34,7 @@
 
 	// Card Favorite
 	&-fav {
+		
 		position: absolute;
 		top: 0.938em;
 		right: 0.938em;
@@ -41,6 +42,10 @@
 		font-weight: bold;
 		opacity: 0;
 		@include prefix(transition, all 0.3s ease);
+
+		&:after {
+			content: attr(data-counter);
+		}
 
 		// Heart Icon
 		&__icon, &__icon:before, &__icon:after {
@@ -103,4 +108,15 @@
 		}
 	}
 
+	// Faved event
+	&--faved .c-fav__icon {
+		@include prefix(transition, all .3s ease);
+		@include prefix(animation, pulse .5s ease);
+	}
+
 }
+@-webkit-keyframes pulse { 50%{ @include prefix(transform, scale(1.2) rotate(45deg)); } }
+@-ms-keyframes pulse { 50%{ @include prefix(transform, scale(1.2) rotate(45deg)); } }
+@-moz-keyframes pulse { 50%{ @include prefix(transform, scale(1.2) rotate(45deg)); } }
+@-o-keyframes pulse { 50%{ @include prefix(transform, scale(1.2) rotate(45deg)); } }
+@keyframes pulse { 50%{ @include prefix(transform, scale(1.2) rotate(45deg)); } }

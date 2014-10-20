@@ -1,0 +1,2 @@
+// Using Vanilla JS because Jquery is too large to load for this
+document.addEventListener("DOMContentLoaded",function(){function t(){e[i].addEventListener("click",function(){var e=this;e.classList.add("c--faved");setTimeout(function(){e.classList.remove("c--faved")},500);e.querySelector("[data-counter]").dataset.counter++})}var e=document.querySelectorAll(".c");for(i=0;i<e.length;i++)t()},!1);

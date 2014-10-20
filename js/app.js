@@ -1,14 +1,24 @@
-// $(document).ready(function(){
-// 	$('.c').click(function(){
-// 		$(this).addClass('c--faved');
-// 	});
-// 	$('body').delay(500).queue(function(){
-//       $('.c').removeClass('c--faved');
-// 	});
-// });
+// Using Vanilla JS because Jquery is too large to load for this
+document.addEventListener('DOMContentLoaded', function() {
 
-var id='c';
-var myClassName=" c--faved"; //must keep a space before class name
-var d;
-d=document.getElementsByClassName(id);
-d.className = d.className + myClassName; // adding new class name
+// Add Class of 'faved' when card is clicked
+var card = document.querySelectorAll('.c');
+
+// Listen for click on one card
+function favEvent(){
+	card[i].addEventListener('click', function(){
+		var clicked = this;
+		clicked.classList.add('c--faved'); // Add class
+		setTimeout(function(){
+			clicked.classList.remove('c--faved'); // Remove class
+		}, 500);
+		clicked.querySelector('[data-counter]').dataset.counter ++; // Increment fav counter
+	});
+}
+
+// Apply to all cards
+for ( i=0; i < card.length; i++ ) {
+	favEvent();
+}
+
+}, false);
