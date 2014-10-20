@@ -1,3 +1,7 @@
+// Base Settings
+$base: #EDEFF0;
+
+// Base Styles
 body {
 	background: $base;
 	font-family: Helvetica, sans-serif;
@@ -11,6 +15,7 @@ img {
 	max-width: 100%;
 }
 
+// Base Font Styles
 h1 {
 	font-size: 1em;
 	color: darken($base, 69.58%);
@@ -20,11 +25,9 @@ h2 {
 	font-size: 0.75em;
 	font-weight: normal;
 	color: darken($base, 68.73%);
-	margin: 0;
 }
 
 time {
 	font-size: 0.75em;
 	color: darken($base, 34.5%);
-	margin: 0;
 }

@@ -1,8 +1,10 @@
+// Grid container
 .g {
 	margin: 0.938em auto;
 	max-width: 75em;
 	text-align: center;
 
+	// Grid item (take advantage of all items being the same width)
 	&-item {
 		display: inline-block;
 		margin: 0.938em;
