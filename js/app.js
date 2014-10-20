@@ -6,13 +6,14 @@ var card = document.querySelectorAll('.c');
 
 // Listen for click on one card
 function favEvent(){
-	card[i].addEventListener('click', function(){
+	card[i].addEventListener('click', function(e){
 		var clicked = this;
 		clicked.classList.add('c--faved'); // Add class
 		setTimeout(function(){
 			clicked.classList.remove('c--faved'); // Remove class
 		}, 500);
 		clicked.querySelector('[data-counter]').dataset.counter ++; // Increment fav counter
+		return false;
 	});
 }
 
