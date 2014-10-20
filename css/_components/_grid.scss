@@ -8,6 +8,7 @@
 	&-item {
 		display: inline-block;
 		margin: 0.938em;
+		vertical-align: top;
 
 		@media screen and (min-width: 44em){
 			width: 45%;

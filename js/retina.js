@@ -157,8 +157,8 @@
                         that.el.setAttribute('width', that.el.naturalWidth);
                         that.el.setAttribute('height', that.el.naturalHeight);
                     } else {
-                        that.el.setAttribute('width', that.el.offsetWidth);
-                        that.el.setAttribute('height', that.el.offsetHeight);
+                        //that.el.setAttribute('width', that.el.offsetWidth);
+                        //that.el.setAttribute('height', that.el.offsetHeight);
                     }
                 }
 
